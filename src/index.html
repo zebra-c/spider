@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zebra spider</title>
+    <!-- <link href="./test11.css"></link> -->
+  </head>
+
+  <body>
+    <div id="container">
+      <div
+        class="content"
+        style="
+          width: 600px;
+          height: 600px;
+          word-wrap: break-word;
+          background-color: gray;
+        "
+      >
+        <button id="clickBtn" onclick="a()">点我</button>
+        <!-- <button onclick="sendAjaxSuccess()">sendAjaxSuccess</button> -->
+        <!-- <button onclick="sendAjaxError()">sendAjaxError</button> -->
+      </div>
+    </div>
+    <script>
+      //onerror 异常
+      // window.a.b = 100;
+      // function a () {
+      //   c()
+      //   function c (){
+      //     window.d.c = 100
+      //   }
+      // }
+      // a()
+
+      // promise 异常
+      // new Promise((resolve, reject) => {
+      //   // reject({ a: 100 });
+      //   reject("12");
+      //   window.a.aa = 200;
+      // });
+
+      // ajax
+      // function sendAjaxSuccess() {
+      //   let xhr = new XMLHttpRequest();
+      //   xhr.open("GET", "/success", true);
+      //   xhr.responseType = "json";
+      //   xhr.onload = function () {
+      //     console.log(xhr.response);
+      //   };
+      //   xhr.send();
+      // }
+      // function sendAjaxError() {
+      //   let xhr = new XMLHttpRequest();
+      //   xhr.open("POST", "/error", true);
+      //   xhr.responseType = "json";
+      //   xhr.onload = function () {
+      //     console.log(xhr.response);
+      //   };
+      //   xhr.onerror = function (error) {
+      //     console.log(error);
+      //   };
+      //   xhr.send("name=zhufeng");
+      // }
+      console.error("1212121");
+      console.error();
+      // function clickMe() {
+      //   let start = Date.now();
+      //   while (Date.now() - start < 1000) {}
+      // }
+      // setTimeout(() => {
+      //   let content = document.getElementsByClassName("content")[0];
+      //   let h1 = document.createElement("h1");
+      //   h1.innerHTML = "我是这个页面中最有意义的内容";
+      //   h1.setAttribute("elementtiming", "meaningful");
+      //   content.appendChild(h1);
+      // }, 2000);
+
+      // console.log((a.b = 100));
+    </script>
+
+    <!-- <script src="http://192.168.12.83:8000/test.js"></script> -->
+  </body>
+</html>
