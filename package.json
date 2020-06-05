@@ -1,6 +1,6 @@
 {
   "name": "@zebra-c/spider",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "zebra spider",
   "scripts": {
     "build": "webpack",
