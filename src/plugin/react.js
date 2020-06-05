@@ -26,9 +26,6 @@ export const getReact = (React) => {
     }
 
     render() {
-      if (this.state.hasError) {
-        return "something went wrong.";
-      }
       return this.props.children;
     }
   };
