@@ -7,12 +7,11 @@ export const getReact = (React) => {
   return class ErrorBoundary extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { hasError: false };
+      this.state = { e: false };
     }
-
     componentDidCatch(e) {
       let lastEventValue = lastEvent();
-      this.setState({ hasError: true });
+      this.setState({ e });
       const { message } = e;
       tracker.send({
         catorage: "exception",
@@ -26,6 +25,12 @@ export const getReact = (React) => {
     }
 
     render() {
+      if (this.state.e) {
+        const { FallbackComponent } = this.props;
+        if (FallbackComponent) return React.createElement(FallbackComponent);
+        window.location.href = "/";
+        return null;
+      }
       return this.props.children;
     }
   };

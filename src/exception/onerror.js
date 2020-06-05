@@ -13,9 +13,9 @@ export function onerror() {
       const { target } = event;
       if (target.src || target.href) {
         tracker.send(handlerErrorResource(event));
-        return;
+      } else {
+        tracker.send(handlerErrorJS(event));
       }
-      tracker.send(handlerErrorJS(event));
     },
     true
   );
